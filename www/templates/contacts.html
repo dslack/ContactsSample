@@ -1,0 +1,22 @@
+<ion-view title="Contacts">
+  <ion-content>
+    <div class="text-center">
+      <ion-spinner ng-if="!data.contactsLoaded"></ion-spinner>
+    </div>
+    <div ng-if="data.contactsLoaded">
+
+      <div class="list list-inset">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="data.search" ng-model-options="{ debounce : 200 }">
+        </label>
+      </div>
+
+      <ion-list>
+        <ion-item collection-repeat="contact in data.contacts" ng-click="showMore(contact)">
+          {{contact.displayName}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

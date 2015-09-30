@@ -1,0 +1,21 @@
+<ion-view title="Weather">
+  <ion-content>
+    <div class="text-center">
+      <ion-spinner ng-if="!data.weatherLoaded"></ion-spinner>
+    </div>
+
+    <div ng-if="data.weatherLoaded">
+      <div class="card">
+        <div class="item">
+          City: {{data.weather.name}}
+        </div>
+        <div class="item">
+          Temperature: {{data.weather.main.temp}} &deg; C
+        </div>
+        <div class="item">
+          Pressure: {{data.weather.main.pressure}} hPa
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

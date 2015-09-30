@@ -1,0 +1,19 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">{{contact.displayName}}</h1>
+    <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="card">
+      <div class="item">
+        Name: {{contact.displayName}}
+      </div>
+      <div class="item">
+        EMail: {{contact.emails[0].value}}
+      </div>
+      <div class="item">
+        Phone #: {{contact.phoneNumbers[0].value}}
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
